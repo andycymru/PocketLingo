@@ -9,6 +9,7 @@
     --ff-header: 'Irish Grover', cursive;
     --ff-text: 'Irish Grover', cursive;
   }
+
   /*-------------- Site CODE --------------*/
 
 .justFade { animation: fadeAndScale .7s ease-in; transform-origin: center;}
@@ -21,20 +22,20 @@ html{scroll-behavior: smooth;}
 body{background-color: var(--background); font-family: 'Irish Grover', cursive; opacity: 100%; transition: opacity 0.5s; width: 85%; margin: auto;}
 h1,h2,h3,h4,h5{text-transform: uppercase; font-family: var(--ff-header);}
 h1{margin:5% 0; line-height: 22pt; text-align: center; color: var(--main);}
-h2{font-weight:400; font-size: 22pt; color: var(--main);}
-h3{font-weight:400; font-size: 18pt; color: var(--main);}
+h2{font-size: 22pt; color: var(--main);}
+h3{font-size: 18pt; color: var(--main);}
 p, p a{font-family: var(--ff-text); text-align: left; margin:5% 0; line-height: 1.4em;}
-img{width: 100%; height: auto; margin: 0; padding: 0;}
+img{width: 100%; height: auto; margin: 0; padding: 0; border-radius: 10pt; border: none;}
 li{list-style: none;}
 a{text-decoration: none;}
 svg{height:22pt; width: auto !important; fill:#E5E5E5;}
 
-.language-selector{display: grid; grid-template-columns: 45% 10% 45%; grid-template-rows:1fr 1fr; text-align: center; margin: 10% auto 20% auto;}
+.language-selector{display: grid; grid-template-columns: 45% 10% 45%; grid-template-rows:30% 70%; text-align: center; margin: 10% auto;}
 .your-lingo {grid-column: 1; grid-row: 1;}
 .their-lingo{grid-column: 3; grid-row: 1;}
-.your-flag{grid-column: 1; grid-row: 2;}
+.your-flag{grid-column: 1; grid-row: 2; height: auto;}
 .vs{grid-column: 2; grid-row: 2;}
-.their-flag{grid-column: 3; grid-row: 2;}
+.their-flag{grid-column: 3; grid-row: 2; height: auto;}
 
 
 /* Style the buttons that are used to open and close the accordion panel */
