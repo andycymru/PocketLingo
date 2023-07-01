@@ -20,8 +20,8 @@
 *, *::before, *::after{padding: 0; margin:0; box-sizing: border-box;}
 html{scroll-behavior: smooth;}
 body{background-color: var(--background); font-family: 'Irish Grover', cursive; opacity: 100%; transition: opacity 0.5s; width: 85%; margin: auto;}
-h1,h2,h3,h4,h5{text-transform: uppercase; font-family: var(--ff-header);}
-h1{margin:5% 0; line-height: 22pt; text-align: center; color: var(--main);}
+h1,h2,h3,h4,h5{font-family: var(--ff-header);}
+h1{margin:5% 0; line-height: 22pt; text-align: center; color: var(--sub);}
 h2{font-size: 22pt; color: var(--main);}
 h3{font-size: 18pt; color: var(--main);}
 p, p a{font-family: var(--ff-text); text-align: left; margin:5% 0; line-height: 1.4em;}
