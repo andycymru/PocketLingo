@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang=“en”>
+  <head>
+    <meta charset=“UTF-8” />
+    <title>JSON-JS</title>
+    
+    <style>
+    .custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-list {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dropdown-list li {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.dropdown-list li img {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.dropdown-list li span {
+  font-size: 14px;
+}
+
+/* Show the dropdown list when the button is clicked */
+.custom-dropdown.open .dropdown-list {
+  display: block;
+}
+     </style>
+    
+    
+    
+  </head>
+  <body>
+    <h1>click flag image to choose from dropdown</h1>
+    
+<div class=“custom-dropdown”>
+  <button class=“dropdown-button”>
+    <img src=“./countries/maori/Maori.svg” alt=“Dropdown Icon”>
+  </button>
+  <ul class=“dropdown-list”>
+    <li>
+      <img src=“/countries/maori/Maori.svg” alt=“Option 1”>
+      <span>Option 1</span>
+    </li>
+    <li>
+      <img src=“path/to/image2.png” alt=“Option 2”>
+      <span>Option 2</span>
+    </li>
+    <li>
+      <img src=“path/to/image3.png” alt=“Option 3”>
+      <span>Option 3</span>
+    </li>
+  </ul>
+</div>
+    
+    <script>
+    // Get the necessary elements
+const dropdownButton = document.querySelector(‘.dropdown-button’);
+const dropdownList = document.querySelector(‘.dropdown-list’);
+const options = document.querySelectorAll(‘.dropdown-list li’);
+
+// Toggle the dropdown list
+dropdownButton.addEventListener(‘click’, () => {
+  dropdownList.classList.toggle(‘open’);
+});
+
+// Handle option selection
+options.forEach((option) => {
+  option.addEventListener(‘click’, () => {
+    const selectedImage = option.querySelector(‘img’);
+    const selectedText = option.querySelector(‘span’).textContent;
+
+    // Update the button with the selected option
+    dropdownButton.innerHTML = ‘’;
+    dropdownButton.appendChild(selectedImage.cloneNode(true));
+    dropdownButton.innerHTML += selectedText;
+
+    // Close the dropdown list
+    dropdownList.classList.remove(‘open’);
+  });
+});
+    </script>
+    
+    
+  </body>
+</html>
